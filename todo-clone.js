@@ -43,7 +43,6 @@ function filterTodo(e) {
 
 function deleteTodo(e) {
   if ((e.target.className === "fa fa-remove")) {
-    // console.log("jfakjas")
     e.target.parentElement.parentElement.remove();
     deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
     showAlert("warning", "Todo silindi.");
