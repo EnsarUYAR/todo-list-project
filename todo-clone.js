@@ -15,6 +15,7 @@ function addEventListeners() {
   document.addEventListener("DOMContentLoaded", loadTodoToUI);
   todoList.addEventListener("click", deleteTodo);
   filter.addEventListener("keyup", filterTodo);
+  clearButton.addEventListener("click", clearAllTodos)
 }
 
 function addTodo(e) {
@@ -30,6 +31,12 @@ function addTodo(e) {
   }
 
   e.preventDefault();
+}
+
+function clearAllTodos(){
+  const listItem = document.querySelectorAll(".list-group-item");
+
+  listItem.pop();
 }
 
 function filterTodo(e) {
